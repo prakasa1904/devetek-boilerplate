@@ -1,5 +1,6 @@
 # dependencies
 node_modules/
+py_modules/
 
 
 # build
@@ -8,6 +9,7 @@ build/
 # local cache
 .vscode
 .DS_Store
+*.pyc
 
 # local file cache
 .env
