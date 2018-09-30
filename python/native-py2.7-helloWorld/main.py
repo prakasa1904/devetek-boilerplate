@@ -7,6 +7,7 @@ from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 middlewareHandle = security.Authorize()
 
 class ServerHandler(BaseHTTPRequestHandler):
+  """Respond to a GET request."""
   def do_GET(self):
     if self.path == '/':
       self.path = '../public/helloWorld.html'
@@ -22,7 +23,7 @@ class ServerHandler(BaseHTTPRequestHandler):
 					file.close()
         return
       except IOError:
-        self.send_error(404, "File Not Found %s" % self.path)
+        self.send_error(404, "Page Not Found %s" % self.path)
         return
     
     elif self.path == '/favicon.ico':
@@ -39,11 +40,13 @@ class ServerHandler(BaseHTTPRequestHandler):
           file.close()
         return
       except IOError:
-        self.send_error(404, "File Not Found %s" % self.path)
+        self.send_error(404, "Page Not Found %s" % self.path)
         return
+    else:
+      self.send_error(404, "Page Not Found %s" % self.path)
+    """Respond to a POST request."""
     def do_POST(self):
-      self.server_version = SERVER_NAME
-      pass
+      self.send_error(404, "Page Not Found %s" % self.path)
       
 if __name__ == '__main__':
   server = HTTPServer((HOST, PORT), ServerHandler)
