@@ -12,10 +12,13 @@ Contoh yang sekarang exist kita ada boilerplate express webpack hello world!. Se
 
 # Yang Jadi
 
-- Javascript
-  -- [webpack express helloWorld](https://github.com/prakasa1904/devetek-boilerplate/tree/master/javascript/webpack-express-helloWorld)
-- Python
-  -- [native py2.7 helloWorld](https://github.com/prakasa1904/devetek-boilerplate/tree/master/python/native-py2.7-helloWorld)
+## Javascript
+
+- [webpack express helloWorld](https://github.com/prakasa1904/devetek-boilerplate/tree/master/javascript/webpack-express-helloWorld)
+
+## Python
+
+- [native py2.7 helloWorld](https://github.com/prakasa1904/devetek-boilerplate/tree/master/python/native-py2.7-helloWorld)
 
 # Contributors
 
