@@ -39,12 +39,7 @@ const webpackConfig = {
   devtool: ifDev("eval-source-map", ""),
   performance: isProd,
   entry: {
-    server: [
-      ifDev(
-        `${baseResolver(`./${DIR}/tools/webpack/start.js`)}`,
-        `${baseResolver(`./${DIR}/app.js`)}`
-      )
-    ]
+    server: `${baseResolver(`./${DIR}/app.js`)}`
   },
   output: {
     path: baseResolver(`./build/${DIR}`),

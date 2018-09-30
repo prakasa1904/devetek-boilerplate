@@ -1,19 +1,19 @@
 import express from "express";
-
 import { baseResolver } from "../shared/utils/path";
 import { isProd } from "../shared/utils/logic";
 
-const {
-  DIR = "",
-  NODE_ENV = "development",
-  HOST = "localhost",
-  PORT = 1000
-} = process.env;
+const debug = require("debug")("server");
 const app = express();
+const baseBuildDir = baseResolver(`./build/${__BASEDIR__}`);
 
-app.use(express.static("public"));
-app.get("*", (req, res) =>
-  res.sendFile(baseResolver("./public/helloWorld.html"))
-);
+debug("Starting...");
 
-app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+app.use("/", express.static(baseBuildDir, { index: false }));
+
+app.get("/*", (req, res) => {
+  res.sendFile(baseResolver(`./build/${__BASEDIR__}/index.html`));
+});
+
+app.listen(__PORT__, () => {
+  console.log(`Listening on: http://${__HOST__}:${__PORT__}`);
+});
