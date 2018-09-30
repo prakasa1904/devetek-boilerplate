@@ -1,6 +1,6 @@
 # Deskripsi
 
-Ini initnya ga penting banget sih, cuman mau nampilin `Hello Wolrd!` aja ribet banget. Tapi ngga papa, buat yang mau memperbaiki, memperjelas, meluruskan dan hal-hal yang semacemnya. Silahkan langsung isi sendiri di kolom #contributors
+Ini initnya ga penting banget sih, cuman mau nampilin `Hello Wolrd!` aja ribet banget. Tapi ngga papa, buat yang mau memperbaiki, memperjelas, meluruskan dan hal-hal yang semacemnya. Silahkan langsung isi sendiri di kolom [#contributors](https://github.com/prakasa1904/devetek-boilerplate/tree/master/python/native-py2.7-helloWorld#contributors)
 
 # Cara Mulai
 
