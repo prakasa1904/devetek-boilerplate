@@ -3,7 +3,7 @@ const {
   DIR = "",
   NODE_ENV = "development",
   HOST = "localhost",
-  PORT = 9000
+  PORT = 1000
 } = process.env;
 const isDev = NODE_ENV === "development";
 const isProd = !isDev;

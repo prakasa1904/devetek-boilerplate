@@ -11,7 +11,10 @@
     "yarn": ">=1.9.4"
   },
   "scripts": {
-    "express:webpack:helloWorld": "bnr express:webpack:helloWorld"
+    "express:webpack:helloWorld": "bnr express:webpack:helloWorld",
+    "express:webpack:vue:helloWorld:server": "bnr express:webpack:vue:helloWorld:server",
+    "express:webpack:vue:helloWorld:client": "bnr express:webpack:vue:helloWorld:client",
+    "express:webpack:vue:helloWorld": "npm-run-all --parallel express:webpack:vue:helloWorld:client express:webpack:vue:helloWorld:server"
   },
   "betterScripts": {
     "express:webpack:helloWorld": {
@@ -22,6 +25,27 @@
         "HOST": "localhost",
         "PORT": 9000
       }
+    },
+    "express:webpack:vue:helloWorld:client": {
+      "command": "webpack --config ./webpack-express-vue-helloWorld/tools/webpack/client.config.js",
+      "env": {
+        "DIR": "webpack-express-vue-helloWorld",
+        "NODE_ENV": "development",
+        "HOST": "localhost",
+        "PORT": 9000
+      }
+    },
+    "express:webpack:vue:helloWorld:server": {
+      "command": "webpack --config ./webpack-express-vue-helloWorld/tools/webpack/server.config.js",
+      "env": {
+        "DIR": "webpack-express-vue-helloWorld",
+        "NODE_ENV": "development",
+        "HOST": "localhost",
+        "PORT": 9000
+      }
+    },
+    "express:webpack:vue:helloWorld": {
+      "command": "npm-run-all --parallel express:webpack:vue:helloWorld:client express:webpack:vue:helloWorld:server"
     }
   },
   "devDependencies": {
@@ -31,6 +55,9 @@
     "npm-run-all": "^4.1.3",
     "open-browser-webpack-plugin": "^0.0.5",
     "start-server-webpack-plugin": "^2.2.5",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",

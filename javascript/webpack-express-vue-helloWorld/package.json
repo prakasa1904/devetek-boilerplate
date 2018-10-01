@@ -1,0 +1,11 @@
+{
+  "name": "webpack-express-vue-hello-world",
+  "version": "1.0.0",
+  "author": "Prakasa <prakasa@devetek.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1"
+  }
+}

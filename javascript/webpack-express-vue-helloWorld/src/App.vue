@@ -1,0 +1,1 @@
+<template><div>Hello World From Vue!</div></template>
