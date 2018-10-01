@@ -15,6 +15,7 @@ Contoh yang sekarang exist kita ada boilerplate express webpack hello world!. Se
 ## Javascript
 
 - [webpack express helloWorld](https://github.com/prakasa1904/devetek-boilerplate/tree/master/javascript/webpack-express-helloWorld)
+- [webpack express vue helloWorld](https://github.com/prakasa1904/devetek-boilerplate/tree/master/javascript/webpack-express-vue-helloWorld)
 
 ## Python
 
